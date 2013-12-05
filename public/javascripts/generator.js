@@ -4,7 +4,8 @@ function generate() {
 		'Lady Gaga',
 		'Morgan Freeman',
 		'Tilda Swinton',
-		'James Franco'
+		'James Franco',
+		'Kanye West'
 	];
 
 	intro = [
@@ -12,7 +13,8 @@ function generate() {
 		'You\'ll not gonna believe',
 		'Here why this',
 		'Read the reasons',
-		'Understand why'
+		'Understand why',
+		'Meet the',
 	];
 
 	introPlaces = [
@@ -27,7 +29,8 @@ function generate() {
 		'people who',
 		'family that',
 		'group that',
-		'rock band that'
+		'rock band that',
+		'a school teacher'
 	];
 
 	actions = [
@@ -35,15 +38,16 @@ function generate() {
 		'sued',
 		'smoke weed with',
 		'have sex with',
-		'play sax with'
+		'play sax with',
+		'teach piano to'
 	];	
 
 	final = [
 		'don\'t want to go back to Bosnia',
-		'don\'t want to go back to Bosnia',
-		'don\'t want to go back to Bosnia',
-		'don\'t want to go back to Bosnia',
-		'don\'t want to go back to Bosnia'
+		'want a memorial in its honor.',
+		'will run for the next elections',
+		'want to open a meat restaurant in India',
+		'wants to ressurects his dead dog'
 	];
 
 	i = getRandomInt(0,4);
