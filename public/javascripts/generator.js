@@ -1,6 +1,6 @@
 function generate() {
 	people = [
-		'Tom Hiddleston',
+		'Iggy Pop',
 		'Lady Gaga',
 		'Morgan Freeman',
 		'Tilda Swinton',
@@ -30,7 +30,7 @@ function generate() {
 		'family that',
 		'group that',
 		'rock band that',
-		'a school teacher'
+		'school teacher'
 	];
 
 	actions = [
@@ -47,14 +47,15 @@ function generate() {
 		'want a memorial in its honor.',
 		'will run for the next elections',
 		'want to open a meat restaurant in India',
-		'wants to ressurects his dead dog'
+		'wants to ressurects his dead dog',
+		'don\'t have a shower for 3 years'
 	];
 
-	i = getRandomInt(0,4);
-	j = getRandomInt(0,4);
-	k = getRandomInt(0,4);
-	l = getRandomInt(0,4);
-	m = getRandomInt(0,4);
+	i = getRandomInt(0,5);
+	j = getRandomInt(0,5);
+	k = getRandomInt(0,5);
+	l = getRandomInt(0,5);
+	m = getRandomInt(0,5);
 
 
 	console.log(i);
