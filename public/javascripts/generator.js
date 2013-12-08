@@ -1,70 +1,93 @@
 function generate() {
-	people = [
-		'Iggy Pop',
-		'Lady Gaga',
-		'Morgan Freeman',
-		'Tilda Swinton',
-		'James Franco',
-		'Kanye West'
-	];
-
 	intro = [
-		'Meet the',
-		'You\'ll not gonna believe',
-		'Here why this',
-		'Read the reasons',
 		'Understand why',
-		'Meet the',
-	];
+		'Read the reasons why',
+		'Why',
+		'A School In Ontario',
+		'A transexual',
+		'The Bangladeshis',
+		'A british man',
+		'A catholic priest',
+	];	
 
-	introPlaces = [
-		'We\'d go to',
-		'We send',
-		'We have dinner',
-		'We\'d smoke weed',
+	actions = [
+		'wants to burn',
+		'wants to buy',
+		'wants to ban',
+		'was sued for',
+		'was banned from',
+		'wants to make a movie for'
 	];
 
 	objects = [
-		'folk band that',
-		'people who',
-		'family that',
-		'group that',
-		'rock band that',
-		'school teacher'
+		'a inflatable doll',
+		'a KKK member',
+		'Lady Gaga\'s dress',
+		'a collection of old movies',
+		'a meth pipe',
+		'a Jesus shape dildo'
 	];
 
-	actions = [
-		'tried to kill',
-		'sued',
-		'smoke weed with',
-		'have sex with',
-		'play sax with',
-		'teach piano to'
-	];	
-
-	final = [
-		'don\'t want to go back to Bosnia',
-		'want a memorial in its honor.',
-		'will run for the next elections',
-		'want to open a meat restaurant in India',
-		'wants to ressurects his dead dog',
-		'don\'t have a shower for 3 years'
+	people = [
+		'James Franco',
+		'Paris Hilton',
+		'Sarah Palin',
+		'Phil Collins',
+		'Jack Black',
+		'Kanye West',
+		'Macklemore',
+		'Mark Zuckerberg',
+		'Skrillex'
 	];
 
-	i = getRandomInt(0,5);
-	j = getRandomInt(0,5);
-	k = getRandomInt(0,5);
-	l = getRandomInt(0,5);
-	m = getRandomInt(0,5);
+
+	places = [
+		'Wal Mart',
+		'Apple Store',
+		'Cinema',
+		'a market on Sarajevo'
+	];
+
+	causes = [
+		'poop in Michelle Obama\'s purse',
+		'sell meth in front of a catholic school',
+		'sell plutonium on ebay',
+		'insult an holocaust survivor'
+	];
+
+	i = getRandomInt(0,intro.length-1);
+	j = getRandomInt(0,objects.length-1);
+	k = getRandomInt(0,actions.length-1);
+	l = getRandomInt(0,people.length-1);
+	m = getRandomInt(0,places.length-1);
+	n = getRandomInt(0,causes.length-1);
 
 
-	console.log(i);
+	random = intro[i];
 
-	random = intro[i] + ' ' + objects[j] + ' ' + actions[k] + ' ' + people[l];
+	if (i < 3) {
+		t = getRandomInt(3,intro.length-1);
+		random = random + ' ' + intro[t] + ' ' +  actions[k];		
 
-	if (i == 4 || i == 2) {
-		random = random + ' ' + final[m];
+		if (k == 3) {
+			random = random + ' ' + causes[n];
+		} else if (k < 3) {
+			random = random + ' ' + people[l];
+		} else {
+			random = random + ' ' + places[m];
+		}
+	} else {
+		random = random + ' ' +  actions[k];
+
+		if (k < 3) {
+			random = random + ' ' + objects[j] + ' for ' + causes[n];
+		} else if (k == 3) {
+			random = random + ' ' + people[n] + ' for ' +  causes[n];
+		} else {
+			random = random + ' ' + places[m] + ' for ' + causes[n];
+		}
 	}
+
 
 	$('#randomTitle').html(random);
 }	
